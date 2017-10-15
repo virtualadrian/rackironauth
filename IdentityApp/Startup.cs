@@ -9,6 +9,7 @@ using IdentityApp.Data;
 using IdentityApp.Models;
 using IdentityApp.Services;
 using Microsoft.AspNetCore.Identity;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace IdentityApp
 {
@@ -34,6 +35,11 @@ namespace IdentityApp
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -90,6 +96,18 @@ namespace IdentityApp
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+
+            app.UseSwagger(c =>
+            {
+                c.RouteTemplate = "api-docs/{documentName}/swagger.json";
+            });
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/api-docs/v1/swagger.json", "Rack IRON Identity App API V1");
+
             });
         }
     }
