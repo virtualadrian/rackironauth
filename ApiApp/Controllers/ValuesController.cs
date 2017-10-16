@@ -16,7 +16,7 @@ namespace ApiApp.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values
+        // GET api/values 
         [HttpGet("hi-laura-checkitout")]
         public IEnumerable<string> GetValuesLaura()
         {
