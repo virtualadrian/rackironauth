@@ -69,6 +69,12 @@ https://id4srv-dev.ocp01.rackiron.com/api-docs/v1/swagger.json
 https://elanderson.net/2017/09/identity-server-api-migration-to-asp-net-core-2/
 
 
+### License:
+
+[<img src="https://git.io/vdMPM">](https://git.io/vdMPH)
+
+
+ 
 
 
 
