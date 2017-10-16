@@ -64,7 +64,9 @@ https://id4srv-dev.ocp01.rackiron.com/api-docs/v1/swagger.json
 
 
 
+### References:
 
+https://elanderson.net/2017/09/identity-server-api-migration-to-asp-net-core-2/
 
 
 
